@@ -186,6 +186,9 @@ def lucky_pick(
     else:
         songs = playlists.get("Hype", []) + playlists.get("Chill", [])
 
+    if not songs:
+        return None
+
     return random_choice_or_none(songs)
 
 
